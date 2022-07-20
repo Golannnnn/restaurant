@@ -1,0 +1,1 @@
+(()=>{"use strict";console.log("Helllooo"),console.log("I am imported from menu.js"),console.log("I am imported from menu.js")})();
