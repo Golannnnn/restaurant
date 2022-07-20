@@ -13,6 +13,10 @@ const createHeader = (() => {
     const menu = document.createElement('div');
     const about = document.createElement('div');
 
+    home.classList.add('home-link');
+    menu.classList.add('menu-link');
+    about.classList.add('about-link');
+
     home.textContent = 'Home';
     menu.textContent = 'Menu';
     about.textContent = 'About';
