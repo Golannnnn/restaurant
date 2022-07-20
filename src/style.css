@@ -1,3 +1,5 @@
+/* index */
+
 header {
     display: flex;
     flex-direction: row;
@@ -14,4 +16,26 @@ header .menu-link {
 
 header .about-link {
     color: blue;
+}
+
+/* menu */
+
+.menu-container {
+    display: flex;
+    justify-content: center;
+}
+
+.menu-heading {
+    color: greenyellow;
+}
+
+/* about */
+
+.about-container {
+    display: flex;
+    justify-content: center;
+}
+
+.about-heading {
+    color: greenyellow;
 }

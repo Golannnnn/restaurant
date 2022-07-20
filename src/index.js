@@ -1,10 +1,6 @@
 import './style.css';
-import { menuMessage } from './menu.js';
-import { aboutMessage } from './about.js';
-
-console.log('Helllooo');
-menuMessage();
-aboutMessage();
+import { createMenu } from './menu.js';
+import { createAbout } from './about.js';
 
 const createHeader = (() => {
     const content = document.querySelector('#content');
