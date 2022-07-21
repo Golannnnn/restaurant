@@ -1,4 +1,5 @@
 import './style.css';
+import { createHome } from './home.js';
 import { createMenu } from './menu.js';
 import { createAbout } from './about.js';
 
@@ -19,4 +20,6 @@ const createHeader = (() => {
 
     content.appendChild(header);
     header.append(home, menu, about);
+
+    return { content, header, home, menu, about };
 })();
