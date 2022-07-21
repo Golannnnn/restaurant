@@ -28,11 +28,11 @@ const createHeader = (() => {
     header.appendChild(linkContainer);
     linkContainer.append(home, menu, about);
 
-    return { content, header, home, menu, about };
+    return { content, header, linkContainer, home, menu, about };
 })();
 
 const handlePageSwitch = (() => {
-    const { content, header, home, menu, about } = createHeader;
+    const { content, header, linkContainer, home, menu, about } = createHeader;
     const homeContainer = document.querySelector('.home-container');
     const menuContainer = document.querySelector('.menu-container');
     const aboutContainer = document.querySelector('.about-container')
@@ -44,6 +44,20 @@ const handlePageSwitch = (() => {
             };
     };
 
+    const activeModule = (module) => {
+        const children = linkContainer.children;
+
+        for (let i = 0; i < children.length; i++) {
+            if (children[i] === module) {
+                children[i].classList.add('active-module');
+            }
+            if (children[i] !== module) {
+                children[i].classList.remove('active-module');
+            }
+        }
+       //remove class border except for the one you
+    }
+
     const handleHeaderClicks = (e) => {
         switch (e.target) {
             case home:
@@ -51,18 +65,21 @@ const handlePageSwitch = (() => {
                 if (!content.contains(homeContainer)) {
                     removeModule();
                     createHome();
+                    activeModule(home);
                 }
                 break;
             case menu:
                 if (!content.contains(menuContainer)) {
                     removeModule();
                     createMenu();
+                    activeModule(menu);
                 }
                 break;
             case about:
                 if (!content.contains(aboutContainer)) {
                     removeModule();
                     createAbout();
+                    activeModule(about);
                 }
                 break;
         }
