@@ -35,7 +35,7 @@ const handlePageSwitch = (() => {
     const { content, header, linkContainer, home, menu, about } = createHeader;
     const homeContainer = document.querySelector('.home-container');
     const menuContainer = document.querySelector('.menu-container');
-    const aboutContainer = document.querySelector('.about-container')
+    const aboutContainer = document.querySelector('.about-container');
 
     const removeModule = () => {
             // remove all child elements of content except for header
@@ -55,7 +55,6 @@ const handlePageSwitch = (() => {
                 children[i].classList.remove('active-module');
             }
         }
-       //remove class border except for the one you
     }
 
     const handleHeaderClicks = (e) => {
@@ -85,5 +84,7 @@ const handlePageSwitch = (() => {
         }
     }
 
+    createHome();
+    home.classList.add('active-module');
     header.addEventListener('click', handleHeaderClicks);
 })();
