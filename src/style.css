@@ -18,6 +18,17 @@ header .about-link {
     color: blue;
 }
 
+/* home */
+
+.home-container {
+    display: flex;
+    justify-content: center;
+}
+
+.home-heading {
+    color: greenyellow;
+}
+
 /* menu */
 
 .menu-container {
