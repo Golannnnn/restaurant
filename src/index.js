@@ -23,3 +23,39 @@ const createHeader = (() => {
 
     return { content, header, home, menu, about };
 })();
+
+const handlePageSwitch = (() => {
+    const { content, header, home, menu, about } = createHeader;
+
+    const removeModule = () => {
+            // remove all child elements of content except for header
+            while (content.childNodes.length > 1) {
+                content.removeChild(content.lastChild);
+            };
+    };
+
+    const handleHeaderClicks = (e) => {
+        switch (e.target) {
+            case home:
+                if (!content.contains(document.querySelector('.home-container'))) {
+                    removeModule();
+                    createHome();
+                }
+                break;
+            case menu:
+                if (!content.contains(document.querySelector('.menu-container'))) {
+                    removeModule();
+                    createMenu();
+                }
+                break;
+            case about:
+                if (!content.contains(document.querySelector('.about-container'))) {
+                    removeModule();
+                    createAbout();
+                }
+                break;
+        }
+    }
+
+    header.addEventListener('click', handleHeaderClicks);
+})();
