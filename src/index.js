@@ -26,6 +26,9 @@ const createHeader = (() => {
 
 const handlePageSwitch = (() => {
     const { content, header, home, menu, about } = createHeader;
+    const homeContainer = document.querySelector('.home-container');
+    const menuContainer = document.querySelector('.menu-container');
+    const aboutContainer = document.querySelector('.about-container')
 
     const removeModule = () => {
             // remove all child elements of content except for header
@@ -37,19 +40,20 @@ const handlePageSwitch = (() => {
     const handleHeaderClicks = (e) => {
         switch (e.target) {
             case home:
-                if (!content.contains(document.querySelector('.home-container'))) {
+                // if the module isn't already rendered
+                if (!content.contains(homeContainer)) {
                     removeModule();
                     createHome();
                 }
                 break;
             case menu:
-                if (!content.contains(document.querySelector('.menu-container'))) {
+                if (!content.contains(menuContainer)) {
                     removeModule();
                     createMenu();
                 }
                 break;
             case about:
-                if (!content.contains(document.querySelector('.about-container'))) {
+                if (!content.contains(aboutContainer)) {
                     removeModule();
                     createAbout();
                 }
