@@ -33,9 +33,6 @@ const createHeader = (() => {
 
 const handlePageSwitch = (() => {
     const { content, header, linkContainer, home, menu, about } = createHeader;
-    const homeContainer = document.querySelector('.home-container');
-    const menuContainer = document.querySelector('.menu-container');
-    const aboutContainer = document.querySelector('.about-container');
 
     const removeModule = () => {
             // remove all child elements of content except for header
@@ -58,6 +55,10 @@ const handlePageSwitch = (() => {
     };
 
     const handleHeaderClicks = (e) => {
+        const homeContainer = document.querySelector('.home-main');
+        const menuContainer = document.querySelector('.menu-main');
+        const aboutContainer = document.querySelector('.about-container');
+
         switch (e.target) {
             case home:
                 // if the module isn't already rendered
