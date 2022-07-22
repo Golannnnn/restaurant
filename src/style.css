@@ -32,6 +32,7 @@
 
 :root {
     --body-bg-color: #f9f6e7;
+    --theme-color: rgb(245, 58, 58);
 }
 
 body {
@@ -67,13 +68,13 @@ header .link-container > * {
 }
 
 header .link-container > *:hover {
-    background-color: rgb(245, 58, 58);
+    background-color: var(--theme-color);
     color: var(--body-bg-color);
     cursor: pointer;
 }
 
 header .link-container > .active-module {
-    border-bottom: 1px solid rgb(245, 58, 58);
+    border-bottom: 1px solid var(--theme-color);
     padding-bottom: 14px;
 }
 /* home */
