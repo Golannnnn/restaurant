@@ -50,12 +50,12 @@ const handlePageSwitch = (() => {
         for (let i = 0; i < children.length; i++) {
             if (children[i] === module) {
                 children[i].classList.add('active-module');
-            }
+            };
             if (children[i] !== module) {
                 children[i].classList.remove('active-module');
-            }
-        }
-    }
+            };
+        };
+    };
 
     const handleHeaderClicks = (e) => {
         switch (e.target) {
@@ -65,24 +65,24 @@ const handlePageSwitch = (() => {
                     removeModule();
                     createHome();
                     activeModule(home);
-                }
+                };
                 break;
             case menu:
                 if (!content.contains(menuContainer)) {
                     removeModule();
                     createMenu();
                     activeModule(menu);
-                }
+                };
                 break;
             case about:
                 if (!content.contains(aboutContainer)) {
                     removeModule();
                     createAbout();
                     activeModule(about);
-                }
+                };
                 break;
-        }
-    }
+        };
+    };
 
     createHome();
     home.classList.add('active-module');
