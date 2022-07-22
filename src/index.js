@@ -85,6 +85,7 @@ const handlePageSwitch = (() => {
         };
     };
 
+    // display createHome on default 
     createHome();
     home.classList.add('active-module');
     header.addEventListener('click', handleHeaderClicks);
