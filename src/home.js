@@ -16,7 +16,7 @@ const createHome = () => {
                         > paragraph2
     */
     const content = document.querySelector('#content');
-    const main = document.createElement('home-main');
+    const main = document.createElement('main');
 
     const section = document.createElement('section');
     const imgWrap = document.createElement('div');
