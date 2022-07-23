@@ -57,7 +57,7 @@ const handlePageSwitch = (() => {
     const handleHeaderClicks = (e) => {
         const homeContainer = document.querySelector('.home-main');
         const menuContainer = document.querySelector('.menu-main');
-        const aboutContainer = document.querySelector('.about-container');
+        const aboutContainer = document.querySelector('.about-main');
 
         switch (e.target) {
             case home:
