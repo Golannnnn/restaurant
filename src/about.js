@@ -64,7 +64,7 @@ const createAbout = () => {
     textParagraph2.classList.add('about-text-paragraph2');
     imgWrap2.classList.add('about-img-wrap2');
     img2.classList.add('about-img2');
-    img2.setAttribute('src', './landscape.jpg');
+    img2.setAttribute('src', './garden-2.jpg');
 
 
     heading.textContent = 'This is where it all started.';
@@ -72,10 +72,10 @@ const createAbout = () => {
 
     sectionHeading.textContent = 'Our History.'
 
-    textHeading.textContent = 'This is tiltle one.';
+    textHeading.textContent = 'The road into town.';
     textParagraph.textContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.';
 
-    textHeading2.textContent = 'This is a tiltle two.';
+    textHeading2.textContent = 'The family garden.';
     textParagraph2.textContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.';
 
     content.append(main, section);
