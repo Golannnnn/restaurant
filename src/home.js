@@ -32,6 +32,9 @@ const createHome = () => {
     const imgWrap2 = document.createElement('div');
     const image2 = document.createElement('img');
 
+    const desktopMediaQuery = window.matchMedia('(min-width: 800px)');
+    const mobileMediaQuery = window.matchMedia('(max-width: 800px)');
+
     main.classList.add('home-main');
     section.classList.add('home-section');
     imgWrap.classList.add('home-img-wrap');
@@ -46,7 +49,7 @@ const createHome = () => {
     heading2.classList.add('home-heading');
     paragraph2.classList.add('home-paragraph');
     imgWrap2.classList.add('home-img-wrap2');
-    image2.setAttribute('src', './2dd1c0eb6afaf2736818.jpg');
+    image2.setAttribute('src', './restaurant-2.jpg');
     image2.classList.add('home-img');
 
     heading.textContent = 'The kitchen.';
@@ -56,12 +59,27 @@ const createHome = () => {
 
     content.appendChild(main);
     main.append(section, section2);
+    
     section.append(imgWrap, textContainer);
     imgWrap.append(image);
     textContainer.append(heading, paragraph);
-    section2.append(textContainer2, imgWrap2);
+
+    if (mobileMediaQuery.matches) section2.append(imgWrap2, textContainer2);
+    else section2.append(textContainer2, imgWrap2);
+
     textContainer2.append(heading2, paragraph2);
     imgWrap2.append(image2);
+
+    const handleDesktop = (e) => {
+        if (e.matches) section2.append(textContainer2, imgWrap2);
+    }
+    
+    const handleMobile = (e) => {
+        if (e.matches) section2.append(imgWrap2, textContainer2);
+    }
+
+    mobileMediaQuery.addEventListener('change', handleMobile);
+    desktopMediaQuery.addEventListener('change', handleDesktop);
 };
 
 export { createHome };
