@@ -4,7 +4,7 @@ import { createMenu } from './menu.js';
 import { createAbout } from './about.js';
 
 const createHeader = (() => {
-    const content = document.querySelector('#content');
+    const content = document.createElement('div');
     const header = document.createElement('header');
     const logo = document.createElement('p');
     const linkContainer = document.createElement('div');
@@ -12,6 +12,7 @@ const createHeader = (() => {
     const menu = document.createElement('p');
     const about = document.createElement('p');
 
+    content.setAttribute('id', 'content');
     logo.classList.add('logo');
     linkContainer.classList.add('link-container');
     home.classList.add('home-link');
@@ -23,6 +24,7 @@ const createHeader = (() => {
     menu.textContent = 'Menu';
     about.textContent = 'About';
 
+    document.body.append(content);
     content.appendChild(header);
     header.appendChild(logo);
     header.appendChild(linkContainer);
