@@ -1,4 +1,24 @@
 const createAbout = () => {
+    /*
+        > content
+            > main
+                > heading
+                > paragraph
+            > section
+                > sectionHeading
+                > historyContainer
+                    > textContainer
+                        > textHeading
+                        > textParagragh
+                    > imgWrap
+                        > img
+                > historyContainer2
+                    > textContainer2
+                        > textHeading2
+                        > textParagragh2
+                    > imgWrap2
+                        > img2
+    */
     const content = document.querySelector('#content');
     const main = document.createElement('main');
     const heading = document.createElement('h1');
@@ -19,6 +39,9 @@ const createAbout = () => {
     const textParagraph2 = document.createElement('p');
     const imgWrap2 = document.createElement('div');
     const img2 = document.createElement('img');
+
+    const desktopMediaQuery = window.matchMedia('(min-width: 800px)');
+    const mobileMediaQuery = window.matchMedia('(max-width: 800px)');
 
     main.classList.add('about-main');
     heading.classList.add('about-heading');
@@ -59,13 +82,27 @@ const createAbout = () => {
     main.append(heading, paragraph);
 
     section.append(sectionHeading, historyContainer, historyContainer2);
-    historyContainer.append(textContainer, imgWrap);
+    
+    if (mobileMediaQuery.matches) historyContainer.append(imgWrap, textContainer);
+    else historyContainer.append(textContainer, imgWrap);
+
     textContainer.append(textHeading, textParagraph);
     imgWrap.append(img);
 
     historyContainer2.append(imgWrap2, textContainer2);
     textContainer2.append(textHeading2, textParagraph2);
     imgWrap2.append(img2);
+
+    const handleDesktop = (e) => {
+        if (e.matches) historyContainer.append(textContainer, imgWrap);
+    }
+    
+    const handleMobile = (e) => {
+        if (e.matches) historyContainer.append(imgWrap, textContainer);
+    }
+
+    mobileMediaQuery.addEventListener('change', handleMobile);
+    desktopMediaQuery.addEventListener('change', handleDesktop);
 };
 
 export { createAbout };
