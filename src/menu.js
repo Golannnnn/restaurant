@@ -38,16 +38,16 @@ const createMenu = () => {
     menu.append(menuHeading);
     asideContainer.append(asideHeading, asideParagraph, asideImgWrap);
 
-    const dishes = ['Rissotto', 'Lagasna', 'Spagetti', 'Pasta salad', 'Pizza margarita', 'Kids menu', 'Sides'];
+    const dishes = ['Risotto', 'Lasagne', 'Spagetti', 'Pasta', 'Polenta', 'Pizza', 'Steak'];
 
     const descriptions = [
+        'Freshly made risotto with home-made ingredients.',
+        'Freshly made lasagne with home-made ingredients.',
+        'Freshly made spagetti with home-made ingredients.',
         'Freshly made pasta with home-made ingredients.',
-        'Freshly made pasta with home-made ingredients.',
-        'Freshly made pasta with home-made ingredients.',
-        'Freshly made pasta with home-made ingredients.',
-        'Freshly made pasta with home-made ingredients.',
-        'Freshly made pasta with home-made ingredients.',
-        'Freshly made pasta with home-made ingredients.',
+        'Freshly made polenta with home-made ingredients.',
+        'Freshly made pizza with home-made ingredients.',
+        'Freshly made steak with home-made ingredients.',
     ]
 
     for (let i = 0; i < 7; i++) {
