@@ -41,6 +41,10 @@ body {
     font-family: 'Montserrat_medium';
 }
 
+#content {
+    min-height: 100vh;
+}
+
 /* index */
 
 header {
@@ -221,11 +225,122 @@ header .link-container > .active-module {
 
 /* about */
 
-.about-container {
+.about-main {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    min-height: 100vh;
+    background-image: url('./sunset_boats.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--body-bg-color);
+}
+
+.about-main::after {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; 
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.0) 90%, var(--body-bg-color) 100%);
+    
 }
 
 .about-heading {
-    color: greenyellow;
+    margin-top: 40px;
+    color: black;
+    font-family: 'Montserrat_bold';
+    font-size: 3rem;
+}
+
+.about-paragraph {
+    margin-top: 25px;
+    font-size: 1.5rem;
+    font-family: 'Montserrat_bold';
+    color: var(--theme-color);
+}
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--body-bg-color);
+}
+
+.about-section-heading {
+    margin: 160px 30px 30px 30px;
+    font-size: 2.5rem;
+    font-family: 'Montserrat_bold';
+}
+
+.about-history-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+}
+
+.about-text-container {
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+    max-width: 400px;
+}
+
+.about-text-heading {
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--theme-color);
+}
+
+.about-img-wrap {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    margin: 40px;
+    box-shadow: 25px -25px #cfcfc2;
+}
+
+
+.about-img {
+    max-width: 100%;
+}
+
+/* second row */
+
+.about-history-container2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 120px 0px 120px 0px;
+}
+
+.about-text-container2 {
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+    max-width: 400px;
+}
+
+.about-text-heading2 {
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--theme-color);
+}
+
+.about-img-wrap2 {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    margin: 40px;
+    box-shadow: -25px -25px 0px 1px #cfcfc2;
+}
+
+.about-img2 {
+    max-width: 100%;
 }
