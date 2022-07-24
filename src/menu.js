@@ -1,3 +1,11 @@
+import './menu.css';
+import image_0 from './images/image0.jpg';
+import image_1 from './images/image1.jpg';
+import image_2 from './images/image2.jpg';
+import image_3 from './images/image3.jpg';
+import image_4 from './images/image4.jpg';
+import image_5 from './images/image5.jpg';
+
 const createMenu = () => {
     /* 
         > content
@@ -63,11 +71,14 @@ const createMenu = () => {
         menu.append(menuTitle, menuParagraph);
     }
 
+        const imageSrc = [image_0, image_1, image_2, image_3, image_4, image_5];
+        let imageEl = [];
+
     for (let i = 0; i < 6; i++) {
-        let image = document.createElement('img');
-        image.classList.add('aside-img');
-        image.setAttribute('src', `./image${[i]}.jpg`);
-        asideImgWrap.append(image);
+        imageEl[i] = document.createElement('img');
+        imageEl[i].classList.add('aside-img');
+        imageEl[i].src = imageSrc[i];
+        asideImgWrap.append(imageEl[i]);
     }
 };
 
