@@ -54,6 +54,22 @@
     .menu-aside-container {
         margin: 50px 14px 50px 14px;
     }
+
+    .menu-heading {
+        font-size: 1.5rem;
+    }
+
+    .menu-para {
+        font-size: 1rem;
+    }
+
+    .menu-aside-heading {
+        font-size: 1.5rem;
+    }
+
+    .menu-aside-para {
+        font-size: 1rem;
+    }
 }
 
 @media only screen and (max-width: 400px) {
@@ -63,5 +79,21 @@
 
     .menu-aside-container {
         margin: 50px 14px 50px 14px;
+    }
+
+    .menu-heading {
+        font-size: 1.5rem;
+    }
+
+    .menu-para {
+        font-size: 1rem;
+    }
+
+    .menu-aside-heading {
+        font-size: 1.5rem;
+    }
+
+    .menu-aside-para {
+        font-size: 1rem;
     }
 }
