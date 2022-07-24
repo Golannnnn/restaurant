@@ -1,3 +1,7 @@
+import './home.css';
+import kitchen from './images/kitchen.jpg';
+import restaurant from './images/restaurant.jpg';
+
 const createHome = () => {
     /*
         > content
@@ -38,7 +42,7 @@ const createHome = () => {
     main.classList.add('home-main');
     section.classList.add('home-section');
     imgWrap.classList.add('home-img-wrap');
-    image.setAttribute('src', './kitchen.jpg');
+    image.src = kitchen;
     image.classList.add('home-img');
     textContainer.classList.add('home-text-container');
     heading.classList.add('home-heading');
@@ -49,7 +53,7 @@ const createHome = () => {
     heading2.classList.add('home-heading');
     paragraph2.classList.add('home-paragraph');
     imgWrap2.classList.add('home-img-wrap2');
-    image2.setAttribute('src', './restaurant-2.jpg');
+    image2.src = restaurant;
     image2.classList.add('home-img');
 
     heading.textContent = 'The kitchen.';
