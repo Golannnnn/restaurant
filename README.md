@@ -1,11 +1,10 @@
-# restaurant
-A fictional restaurant homepage. 
+# Restaurant
+A fictional restaurant homepage from The Odin Project curriculum.
 
 This is my first project working with npm and webpack. The layout is done with DOM manipulation and CSS.
 
 [Live version](http://golannnnn.github.io/restaurant/)
 
-## Resources
 ### Font
 - [Montserrat Alternates](https://fonts.google.com/specimen/Montserrat+Alternates?query=montserrat)
 
