@@ -1,3 +1,7 @@
+import './about.css';
+import landscape from './images/landscape.jpg';
+import garden from './images/garden.jpg';
+
 const createAbout = () => {
     /*
         > content
@@ -56,7 +60,7 @@ const createAbout = () => {
     textParagraph.classList.add('about-text-paragraph');
     imgWrap.classList.add('about-img-wrap');
     img.classList.add('about-img');
-    img.setAttribute('src', './landscape.jpg');
+    img.src = landscape;
 
     historyContainer2.classList.add('about-history-container2');
     textContainer2.classList.add('about-text-container2');
@@ -64,7 +68,7 @@ const createAbout = () => {
     textParagraph2.classList.add('about-text-paragraph2');
     imgWrap2.classList.add('about-img-wrap2');
     img2.classList.add('about-img2');
-    img2.setAttribute('src', './garden-2.jpg');
+    img2.src = garden;
 
 
     heading.textContent = 'This is where it all started.';
